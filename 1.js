@@ -12,7 +12,6 @@ async function cors(url, options) {
     };
     const response = await fetch('http://localhost:3000', fetchOptions);
     const responseText = await response.text();
-    console.log(responseText);
     return responseText;
 }
 
@@ -22,7 +21,6 @@ async function getStatic(key) {
     const url = `${host}/?q=${key}`;
     const response = await fetch(url, {headers:{"x-auth": authString}});
     const responseText = await response.text();
-    console.log(responseText);
     return responseText;
 }
 
@@ -39,7 +37,6 @@ async function write(data) {
     };
     const response = await fetch('http://localhost:3000', fetchOptions);
     const responseText = await response.text();
-    console.log(responseText);
     return responseText;
 }
 
