@@ -34,7 +34,7 @@ async function write(data) {
         headers: {'x-auth': authString, 'Content-type':'application/json'},
         body: JSON.stringify(body)
     };
-    const response = await fetch('serverUrl', fetchOptions);
+    const response = await fetch(serverUrl, fetchOptions);
     const responseText = await response.text();
     return responseText;
 }
